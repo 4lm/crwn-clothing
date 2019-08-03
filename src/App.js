@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
 
+import Homepage from './homepage.comp';
+
 function App() {
   return (
-    <div>Hello World</div>
+    <div>
+      <Homepage />
+    </div>
   );
 }
 
