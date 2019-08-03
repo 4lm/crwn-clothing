@@ -48,8 +48,13 @@ class MenuDirectory extends Component {
   render() {
     return (
       <div className="menu-directory">
-        { this.state.menuItems.map(({title, imageUrl, id}) => (
-          <MenuItem key={id} title={title} />
+        {this.state.menuItems.map(({ id, title, imageUrl, size }) => (
+          <MenuItem
+            key={id}
+            title={title}
+            imageUrl={imageUrl}
+            size={size}
+          />
         ))}
       </div>
     );
