@@ -3,6 +3,12 @@ body {
   padding: 20px 60px;
 }
 
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 0px;
+}
+
 a {
   text-decoration: none;
   color: black;
