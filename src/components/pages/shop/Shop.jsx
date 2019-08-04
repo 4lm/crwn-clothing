@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import SHOP_DATA from './Shop.data';
 
+import Collection from 'components/collection/Collection';
+
 class Shop extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +16,8 @@ class Shop extends Component {
   render() {
     return (
       <div>
-        SHOP PAGE
+        <h1>SHOP PAGE</h1>
+        {/* <Collection></Collection> */}
       </div>
     )
   }
