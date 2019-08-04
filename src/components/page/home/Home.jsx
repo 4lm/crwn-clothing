@@ -5,7 +5,7 @@ import './Home.scss';
 import MenuDirectory from 'components/menu/directory/Directory';
 
 const Home = () => (
-  <div className='homegage'>
+  <div className='home'>
     <MenuDirectory />
   </div>
 );
