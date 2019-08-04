@@ -14,12 +14,14 @@ class Shop extends Component {
   }
 
   render() {
+    const {collections} = this.state;
     return (
-      <div>
-        <h1>SHOP PAGE</h1>
-        {/* <Collection></Collection> */}
+      <div className="shop">
+        {collections.map(({id, ...otherProps }) => (
+          <Collection key={id} {...otherProps}/>
+        ))}
       </div>
-    )
+    );
   }
 }
 
