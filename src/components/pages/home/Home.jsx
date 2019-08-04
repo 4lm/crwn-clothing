@@ -1,7 +1,8 @@
 import React from 'react';
-import './Homepage.scss';
 
-import MenuDirectory from '../../menu-directory/MenuDirectory';
+import './Home.scss';
+
+import MenuDirectory from '../../menu/directory/Directory';
 
 const Homepage = () => (
   <div className='homegage'>

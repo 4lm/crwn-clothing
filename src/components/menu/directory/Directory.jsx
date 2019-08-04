@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import './MenuDirectory.scss';
 
-import MenuItem from '../menu-item/MenuItem';
+import './Directory.scss';
 
-class MenuDirectory extends Component {
+import Item from '../item/Item';
+
+class Directory extends Component {
   constructor() {
     super();
 
     this.state = {
-      menuItems: [
+      items: [
         {
           title: 'hats',
           imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
@@ -48,8 +49,8 @@ class MenuDirectory extends Component {
   render() {
     return (
       <div className="menu-directory">
-        {this.state.menuItems.map(({ id, title, imageUrl, size, linkUrl }) => (
-          <MenuItem
+        {this.state.items.map(({ id, title, imageUrl, size, linkUrl }) => (
+          <Item
             key={id}
             title={title}
             imageUrl={imageUrl}
@@ -62,4 +63,4 @@ class MenuDirectory extends Component {
   }
 }
 
-export default MenuDirectory;
+export default Directory;
