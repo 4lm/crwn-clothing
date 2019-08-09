@@ -11,37 +11,34 @@ import PageSignInOrUp from 'components/page/sign-in-or-up/SignInOrUp';
 import { auth, createUserProfileDocument } from 'firebase/utils';
 
 class App extends React.Component {
+  unsubscribeFromAuth = null;
+
   constructor() {
     super();
 
     this.state = {
-      currentUser: null
-    }
+      currentUser: null,
+    };
   }
 
-  unsubscribeFromAuth = null;
-
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
-        userRef.onSnapshot(snapShot => {
+        userRef.onSnapshot((snapShot) => {
           this.setState(
             {
               currentUser: {
                 id: snapShot.id,
-                ...snapShot.data()
-              }
+                ...snapShot.data(),
+              },
             },
-            () => console.log(this.state)
+            () => console.log(this.state),
           );
         });
       } else {
-        this.setState(
-          { currentUser: userAuth },
-          () => console.log(this.state)
-        );
+        this.setState({ currentUser: userAuth }, () => console.log(this.state));
       }
     });
   }
@@ -51,13 +48,14 @@ class App extends React.Component {
   }
 
   render() {
+    const { currentUser } = this.state;
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header currentUser={currentUser} />
         <Switch>
-          <Route exact path='/' component={PageHome} />
-          <Route path='/shop' component={PageShop} />
-          <Route path='/sign-in' component={PageSignInOrUp} />
+          <Route exact path="/" component={PageHome} />
+          <Route path="/shop" component={PageShop} />
+          <Route path="/sign-in" component={PageSignInOrUp} />
         </Switch>
       </div>
     );

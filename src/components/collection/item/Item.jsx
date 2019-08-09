@@ -2,12 +2,12 @@ import React from 'react';
 
 import './Item.scss';
 
-const Item = ({ id, name, price, imageUrl }) => (
+const Item = ({ name, price, imageUrl }) => (
   <div className="item">
     <div
       className="image"
       style={{
-        backgroundImage: `url(${imageUrl})`
+        backgroundImage: `url(${imageUrl})`,
       }}
     />
     <div className="footer">
