@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './MenuDirectory.scss';
 
 import MenuItem from '../menu-item/MenuItem';
 
-class MenuDirectory extends Component {
+class MenuDirectory extends React.Component {
   constructor() {
     super();
 

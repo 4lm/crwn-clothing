@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import SHOP_DATA from './Shop.data';
 
 import CollectionPreview from 'components/collection/preview/Preview';
 
-class Shop extends Component {
+class Shop extends React.Component {
   constructor(props) {
     super(props);
 

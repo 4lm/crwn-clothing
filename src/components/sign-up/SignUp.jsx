@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import FormInput from 'components/form-input/FormInput';
 import CustomButton from 'components/custom-button/CustomButton';
@@ -7,7 +7,7 @@ import { auth, createUserProfileDocument } from 'firebase/utils';
 
 import './SignUp.scss';
 
-class SignUp extends Component {
+class SignUp extends React.Component {
   constructor() {
     super();
 

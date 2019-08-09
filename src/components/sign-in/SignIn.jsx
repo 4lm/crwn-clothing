@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './SignIn.scss';
 
@@ -7,7 +7,7 @@ import FormInput from 'components/form-input/FormInput';
 
 import { auth, signInWithGoogle } from 'firebase/utils';
 
-class SignIn extends Component {
+class SignIn extends React.Component {
   constructor(props) {
     super(props);
 

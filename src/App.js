@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
@@ -10,7 +10,7 @@ import PageSignInOrUp from 'components/page/sign-in-or-up/SignInOrUp';
 
 import { auth, createUserProfileDocument } from 'firebase/utils';
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
 
