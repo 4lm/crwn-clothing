@@ -4,7 +4,7 @@ import './CollectionPreview.scss';
 
 import CollectionItem from 'components/collection/item/CollectionItem';
 
-const Preview = ({ title, items }) => (
+const CollectionPreview = ({ title, items }) => (
   <div className="container">
     <h1 className="title">{title.toUpperCase()}</h1>
     <div className="preview">
@@ -17,4 +17,4 @@ const Preview = ({ title, items }) => (
   </div>
 );
 
-export default Preview;
+export default CollectionPreview;

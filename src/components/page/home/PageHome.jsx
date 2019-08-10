@@ -2,10 +2,10 @@ import React from 'react';
 
 import MenuDirectory from 'components/menu/directory/MenuDirectory';
 
-const Home = () => (
+const PageHome = () => (
   <div className="home">
     <MenuDirectory />
   </div>
 );
 
-export default Home;
+export default PageHome;
