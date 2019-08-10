@@ -5,12 +5,12 @@ import { connect } from 'react-redux';
 import './App.css';
 
 import Header from 'components/header/Header';
-import PageHome from 'components/page/home/Home';
-import PageShop from 'components/page/shop/Shop';
-import PageSignInOrUp from 'components/page/sign-in-or-up/SignInOrUp';
+import PageHome from 'components/page/home/PageHome';
+import PageShop from 'components/page/shop/PageShop';
+import PageSignInOrUp from 'components/page/sign-in-or-up/PageSignInOrUp';
 
 import { auth, createUserProfileDocument } from 'firebase/utils';
-import { setCurrentUser } from 'redux/user/actions';
+import { setCurrentUser } from 'redux/user/userActions';
 
 class App extends React.Component {
   unsubscribeFromAuth = null;

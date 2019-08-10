@@ -1,4 +1,4 @@
-import { TOGGLE_CART_HIDDEN } from 'redux/types';
+import { TOGGLE_CART_HIDDEN } from 'redux/actionTypes';
 
 const INITIAL_STATE = {
   hidden: true,
