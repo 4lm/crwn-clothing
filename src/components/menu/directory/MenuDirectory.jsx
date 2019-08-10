@@ -2,7 +2,7 @@ import React from 'react';
 
 import './MenuDirectory.scss';
 import MenuItem from 'components/menu/item/MenuItem';
-import DIRECTORY_DATA from './MenuDirectory.data.js';
+import DIRECTORY_DATA from './MenuDirectory.data';
 
 class Directory extends React.Component {
   constructor() {
@@ -14,9 +14,10 @@ class Directory extends React.Component {
   }
 
   render() {
+    const { items } = this.state;
     return (
       <div className="directory">
-        {this.state.items.map(({ id, ...otherProps }) => (
+        {items.map(({ id, ...otherProps }) => (
           <MenuItem key={id} {...otherProps} />
         ))}
       </div>
