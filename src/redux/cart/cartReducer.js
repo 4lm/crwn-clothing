@@ -1,4 +1,5 @@
 import { TOGGLE_CART_HIDDEN, ADD_ITEM_TO_CART } from 'redux/actionTypes';
+import { addItemToCart } from 'redux/cart/cartUtils';
 
 const INITIAL_STATE = {
   hidden: true,
@@ -15,7 +16,7 @@ const cartReducer = (state = INITIAL_STATE, action) => {
     case ADD_ITEM_TO_CART:
       return {
         ...state,
-        cartItems: [...state.cartItems, action.payload],
+        cartItems: addItemToCart(state.cartItems, action.payload),
       };
     default:
       return state;
