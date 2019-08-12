@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import './App.css';
 
@@ -11,6 +12,7 @@ import PageSignInOrUp from 'components/page/sign-in-or-up/PageSignInOrUp';
 
 import { auth, createUserProfileDocument } from 'firebase/utils';
 import { setCurrentUser } from 'redux/user/userActions';
+import { selectCurrentUser } from 'redux/user/userSelectors';
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -57,8 +59,8 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
